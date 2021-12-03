@@ -29,7 +29,9 @@ public class GuessingGame {
             // message = "Enter a guess between 1 and 100" // what type?
             // title = "Guessing Game" // what type?
             // messageType = JOptionPane.INFORMATION_MESSAGE
+            
             // Works the same as original 3 but more expressive - this is an example of a what? Hint: enum
+            // i have forked the repo
             String response = JOptionPane.showInputDialog(null,
                     "Enter a guess between 1 and 100", "Guessing Game", 3);
             userAnswer = Integer.parseInt(response);
@@ -45,7 +47,7 @@ public class GuessingGame {
         // Say "You've used " + count + guesses.
         // If count is one, use "guess", else use "guesses" HINT: Ternary operator
         if (userAnswer <= 0 || userAnswer > 100) {
-            return "Your guess is invalid";
+            return "Your guess is not valid";
         } else if (userAnswer == computerNumber) {
             return "Correct!\nTotal Guesses: " + count;
         } else if (userAnswer > computerNumber) {
